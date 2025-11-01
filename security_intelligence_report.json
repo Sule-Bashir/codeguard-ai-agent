@@ -1,0 +1,61 @@
+{
+  "report_id": "sec_report_1762015717",
+  "generated_at": "2025-11-01T17:48:37.820761",
+  "summary": {
+    "total_scans": 3,
+    "total_findings": 1,
+    "blocked_commits": 1
+  },
+  "detailed_scans": [
+    {
+      "commit_id": "commit_001",
+      "author": "developer@company.com",
+      "filename": "aws_config.py",
+      "timestamp": "2025-11-01T17:48:31.768010",
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "actions_taken": [
+        "\ud83d\udea8 CRITICAL: COMMIT BLOCKED AND REVERTED",
+        "\ud83d\udce7 Alert sent to security-team@company.com",
+        "\ud83d\udd10 Credentials rotation initiated",
+        "\ud83d\udc64 Developer notified: developer@company.com"
+      ],
+      "findings": [
+        {
+          "file": "aws_config.py",
+          "line_number": 3,
+          "match_preview": "AKIAIOSFODNN7EX...",
+          "recommendation": "IMMEDIATE ACTION: Rotate AWS ACCESS KEY",
+          "secret_type": "aws_access_key",
+          "severity": "CRITICAL",
+          "timestamp": "2025-11-01T16:48:32.237283",
+          "type": "SECRET_LEAK"
+        }
+      ]
+    },
+    {
+      "commit_id": "commit_002",
+      "author": "frontend@company.com",
+      "filename": "auth.js",
+      "timestamp": "2025-11-01T17:48:34.546840",
+      "findings_count": 0,
+      "risk_level": "LOW",
+      "actions_taken": [
+        "\u2705 Commit approved - No secrets detected"
+      ],
+      "findings": []
+    },
+    {
+      "commit_id": "commit_003",
+      "author": "devops@company.com",
+      "filename": "config.py",
+      "timestamp": "2025-11-01T17:48:36.819701",
+      "findings_count": 0,
+      "risk_level": "LOW",
+      "actions_taken": [
+        "\u2705 Commit approved - No secrets detected"
+      ],
+      "findings": []
+    }
+  ]
+}
